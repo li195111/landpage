@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./landingpage.css" />
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <script>
+        // Scroll Animate
+        function reveal() {
+            var reveals = document.querySelectorAll(".zoom-in");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 50;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                } else {
+                    reveals[i].classList.remove("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+    </script>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <div class="logo-block">
+                    <a class="navbar-brand" href="#">
+                        <img src="./components/topLogo.png" alt="" />
+                    </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">錨點</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">錨點</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">錨點</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">錨點</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">錨點</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">錨點</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <ul id="social-sidebar">
+            <li class="row">
+                <a class="d-flex justify-content-center">
+                    <span>浮動</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex justify-content-center">
+                    <span>側邊區塊</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex justify-content-center">
+                    <span>垂直至中</span>
+                </a>
+            </li>
+            <li>
+                <a class="d-flex justify-content-center">
+                    <span>(Mobile隱藏)</span>
+                </a>
+            </li>
+        </ul>
+        <script></script>
+    </div>
+    <div class="page-content container-fluid">
+        <div class="main-page page row">
+            <div class="master-vision col justify-content-center align-items-center">
+                <img src="./components/主視覺左JPG.png" alt="" />
+            </div>
+            <div class="master-vision col justify-content-center align-items-center">
+                <img src="./components/主視覺右JPG.png" alt="" />
+            </div>
+        </div>
+        <div class="tab-page page row justify-content-center">
+            <div class="tab-block zoom-in" data-aos="zoom-in">
+                <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#tab1"
+                            type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                            頁籤
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
+                            role="tab" aria-controls="tab2" aria-selected="false">
+                            頁籤
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
+                            role="tab" aria-controls="tab3" aria-selected="false">
+                            頁籤
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="tab-4" data-bs-toggle="tab" data-bs-target="#tab4" type="button"
+                            role="tab" aria-controls="tab4" aria-selected="false">
+                            頁籤
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade zoom-in-1500 show active" id="tab1" role="tabpanel"
+                        aria-labelledby="tab-1">
+                        頁籤內容1<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
+                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
+                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
+                        Computing)在全球雲端產業中發揮影響力，
+                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
+                    </div>
+                    <div class="tab-pane fade rotate-500" id="tab2" role="tabpanel" aria-labelledby="tab-2">
+                        頁籤內容2<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
+                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
+                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
+                        Computing)在全球雲端產業中發揮影響力，
+                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
+                    </div>
+                    <div class="tab-pane fade zoom-in-500" id="tab3" role="tabpanel" aria-labelledby="tab-3">
+                        頁籤內容3<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
+                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
+                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
+                        Computing)在全球雲端產業中發揮影響力，
+                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
+                    </div>
+                    <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab-4">
+                        頁籤內容4<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
+                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
+                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
+                        Computing)在全球雲端產業中發揮影響力，
+                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
+                    </div>
+                </div>
+            </div>
+            <div class="tab-forms-block row zoom-in" data-aos="zoom-in">
+                <div class="form-block col">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-content-1">
+                                收合表單
+                            </button>
+                        </h2>
+                        <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                            <div class="accordion-body">收合內容</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-block col">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-content-2">
+                                收合表單
+                            </button>
+                        </h2>
+                        <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                            <div class="accordion-body">收合內容</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-block col">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-content-3">
+                                收合表單
+                            </button>
+                        </h2>
+                        <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                            <div class="accordion-body">收合內容</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-block col">
+                    <div class="accordion-item col">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq-content-4">
+                                收合表單
+                            </button>
+                        </h2>
+                        <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                            <div class="accordion-body">收合內容</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner-page page row">
+            <div class="banner col d-flex justify-content-center align-items-center">
+                <img src="./components/timeSchedule.jpg" alt="" />
+            </div>
+        </div>
+        <div class="carousel-page page row mx-auto my-auto justify-content-center">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="slide1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="slide2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="slide3"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                        aria-label="slide4"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                        aria-label="slide5"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                        aria-label="slide6"></button>
+                </div>
+                <div class="carousel-inner justify-content-center" role="listbox">
+                    <div class="carousel-item-default">
+                        <a href="" target="_blank">
+                            <img src="./components/slide1.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="carousel-item-default">
+                        <a href="" target="_blank">
+                            <img src="./components/slide2.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="carousel-item-default">
+                        <a href="" target="_blank">
+                            <img src="./components/slide3.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="carousel-item-default">
+                        <a href="" target="_blank">
+                            <img src="./components/slide4.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="carousel-item-default">
+                        <a href="" target="_blank">
+                            <img src="./components/slide5.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="carousel-item-default">
+                        <a href="" target="_blank">
+                            <img src="./components/slide6.png" alt="" />
+                        </a>
+                    </div>
+                </div>
+                <script>
+                    function adjCarouselItems(nSlide) {
+                        let carouselInner = document.querySelector(".carousel-inner");
+                        let oldcarousItems = carouselInner.querySelectorAll(".carousel .carousel-item");
+                        oldcarousItems.forEach((old) => {
+                            carouselInner.removeChild(old);
+                        });
+                        let items = document.querySelectorAll(".carousel .carousel-item-default");
+                        items.forEach((el) => {
+                            const minPerSlide = nSlide;
+                            let carouselItem = document.createElement("div");
+                            carouselItem.className = "carousel-item";
+                            carouselItem.appendChild(el.children[0].cloneNode(true));
+                            let next = el.nextElementSibling;
+                            for (var i = 1; i < minPerSlide; i++) {
+                                if (!next) {
+                                    // wrap carousel by using first child
+                                    next = items[0];
+                                }
+                                let cloneChild = next.cloneNode(true);
+                                carouselItem.appendChild(cloneChild.children[0]);
+                                next = next.nextElementSibling;
+                            }
+                            carouselInner.appendChild(carouselItem);
+                        });
+                        carouselInner.querySelectorAll(".carousel .carousel-item")[0].classList.add("active");
+                    }
+                    function initCarousItems() {
+                        if (window.innerWidth < 768) {
+                            adjCarouselItems(1);
+                        } else {
+                            adjCarouselItems(3);
+                        }
+                    }
+                    initCarousItems();
+                    window.onresize = initCarousItems;
+                </script>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="forms-page page row">
+            <div class="form-list col-md-10 offset-md-1">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-1">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-2">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-3">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-4">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-5">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-6">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-7">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-7" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#faq-content-8">
+                            收合表單
+                        </button>
+                    </h2>
+                    <div id="faq-content-8" class="accordion-collapse collapse" data-bs-parent="#faqlist">
+                        <div class="accordion-body">收合內容</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="links-page page row zoom-in" data-aos="zoom-in">
+            <div class="link-area-block d-flex justify-content-center align-items-center">
+                <a class="link-area justify-content-center align-items-center" href="" target="_blank">
+                    <img src="./components/facebook-logo.svg" alt="" />
+                    <div class="link-icon">Icon 超連結</div>
+                </a>
+            </div>
+            <div class="link-area-block d-flex justify-content-center align-items-center">
+                <a class="link-area justify-content-center align-items-center" href="" target="_blank">
+                    <img src="./components/instagram-logo.svg" alt="" />
+                    <div class="link-icon">Icon 超連結</div>
+                </a>
+            </div>
+            <div class="link-area-block d-flex justify-content-center align-items-center">
+                <a class="link-area justify-content-center align-items-center" href="" target="_blank">
+                    <img src="./components/line-logo.svg" alt="" />
+                    <div class="link-icon">Icon 超連結</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
