@@ -14,7 +14,7 @@
     <script>
         // AOS Scroll Animation
         // AOS.init();
-        
+
         // Scroll Animate
         function reveal() {
             var reveals = document.querySelectorAll(".zoom-in");
@@ -92,8 +92,20 @@
                 </a>
             </li>
         </ul>
-        <script></script>
     </div>
+    <script>
+        // Float Side Bar 
+        function getYPosition(height){
+            var top  = window.pageYOffset || document.documentElement.scrollTop
+            return window.innerHeight + top - height;
+        }
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarHeight = 300;
+        sidebar.style.top = `${getYPosition(sidebarHeight)}px`;
+        window.onscroll = ()=>{
+            sidebar.style.top = `${getYPosition(sidebarHeight)}px`;
+        }
+    </script>
     <div class="page-content container-fluid">
         <div class="main-page page row">
             <div class="master-vision col justify-content-center align-items-center">
