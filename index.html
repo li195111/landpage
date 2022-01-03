@@ -2,16 +2,17 @@
 
 <head>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <!-- AOS CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
     <link rel="stylesheet" href="./css/landingpage.css" />
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="./js/bootstrap.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/indexScroll.js"></script>
 </head>
 
 <body>
@@ -20,21 +21,6 @@
         // AOS.init();
 
         // Scroll Animate
-        function reveal() {
-            var reveals = document.querySelectorAll(".zoom-in");
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                } else {
-                    reveals[i].classList.remove("active");
-                }
-            }
-        }
-        window.addEventListener("scroll", reveal);
     </script>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -73,43 +59,41 @@
             </div>
         </nav>
     </header>
-    <div class="sidebar">
-        <ul id="social-sidebar">
-            <li class="row">
-                <a class="d-flex justify-content-center">
-                    <span>浮動</span>
-                </a>
-            </li>
-            <li>
-                <a class="d-flex justify-content-center">
-                    <span>側邊區塊</span>
-                </a>
-            </li>
-            <li>
-                <a class="d-flex justify-content-center">
-                    <span>垂直至中</span>
-                </a>
-            </li>
-            <li>
-                <a class="d-flex justify-content-center">
-                    <span>(Mobile隱藏)</span>
-                </a>
-            </li>
-        </ul>
+    <div class="sidebar active">
+        <div class="sidebar-content col">
+            <button class="sidebar-collapse btn" onclick="collapsion()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-right collapseRight" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-left collapseLeft" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.854 3.646a.5.5 0 0 1 0 .708L8.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0zM4.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"/>
+                </svg>
+            </button>
+            <div class="collapseContent text-center">廣達人才招募網</div>
+            <ul class="sidebar-list">
+                <li>
+                    <a class="d-flex justify-content-center">
+                        <span>浮動</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex justify-content-center">
+                        <span>側邊區塊</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex justify-content-center">
+                        <span>垂直至中</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="d-flex justify-content-center">
+                        <span>(Mobile隱藏)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <script>
-        // Float Side Bar 
-        function getYPosition(height){
-            var top  = window.pageYOffset || document.documentElement.scrollTop
-            return window.innerHeight + top - height;
-        }
-        const sidebar = document.querySelector('.sidebar');
-        const sidebarHeight = 300;
-        sidebar.style.top = `${getYPosition(sidebarHeight)}px`;
-        window.onscroll = ()=>{
-            sidebar.style.top = `${getYPosition(sidebarHeight)}px`;
-        }
-    </script>
     <div class="page-content container-fluid">
         <div class="main-page page row">
             <div class="master-vision col justify-content-center align-items-center">
@@ -180,7 +164,7 @@
                 </div>
             </div>
             <div class="tab-forms-block row zoom-in" data-aos="zoom-in">
-                <div class="form-block col">
+                <div class="accordion form-block col">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -193,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-block col">
+                <div class="accordion form-block col">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -206,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-block col">
+                <div class="accordion form-block col">
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -219,7 +203,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="form-block col">
+                <div class="accordion form-block col">
                     <div class="accordion-item col">
                         <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -240,100 +224,78 @@
             </div>
         </div>
         <div class="carousel-page page row mx-auto my-auto justify-content-center">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="slide1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
                         aria-label="slide2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
                         aria-label="slide3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
                         aria-label="slide4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4"
                         aria-label="slide5"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5"
+                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5"
                         aria-label="slide6"></button>
                 </div>
                 <div class="carousel-inner justify-content-center" role="listbox">
                     <div class="carousel-item-default">
-                        <a href="" target="_blank">
-                            <img src="./img/slide1.png" alt="" />
-                        </a>
+                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide1">
+                            <img src="./img/slide1.png" alt="slide1" />
+                        </button>
                     </div>
                     <div class="carousel-item-default">
-                        <a href="" target="_blank">
-                            <img src="./img/slide2.png" alt="" />
-                        </a>
+                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide2">
+                            <img src="./img/slide2.png" alt="slide2" />
+                        </button>
                     </div>
                     <div class="carousel-item-default">
-                        <a href="" target="_blank">
-                            <img src="./img/slide3.png" alt="" />
-                        </a>
+                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide3">
+                            <img src="./img/slide3.png" alt="slide3" />
+                        </button>
                     </div>
                     <div class="carousel-item-default">
-                        <a href="" target="_blank">
-                            <img src="./img/slide4.png" alt="" />
-                        </a>
+                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide4">
+                            <img src="./img/slide4.png" alt="slide4" />
+                        </button>
                     </div>
                     <div class="carousel-item-default">
-                        <a href="" target="_blank">
-                            <img src="./img/slide5.png" alt="" />
-                        </a>
+                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide5">
+                            <img src="./img/slide5.png" alt="slide5" />
+                        </button>
                     </div>
                     <div class="carousel-item-default">
-                        <a href="" target="_blank">
+                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide6">
                             <img src="./img/slide6.png" alt="" />
-                        </a>
+                        </button>
                     </div>
                 </div>
-                <script>
-                    function adjCarouselItems(nSlide) {
-                        let carouselInner = document.querySelector(".carousel-inner");
-                        let oldcarousItems = carouselInner.querySelectorAll(".carousel .carousel-item");
-                        oldcarousItems.forEach((old) => {
-                            carouselInner.removeChild(old);
-                        });
-                        let items = document.querySelectorAll(".carousel .carousel-item-default");
-                        items.forEach((el) => {
-                            const minPerSlide = nSlide;
-                            let carouselItem = document.createElement("div");
-                            carouselItem.className = "carousel-item";
-                            carouselItem.appendChild(el.children[0].cloneNode(true));
-                            let next = el.nextElementSibling;
-                            for (var i = 1; i < minPerSlide; i++) {
-                                if (!next) {
-                                    // wrap carousel by using first child
-                                    next = items[0];
-                                }
-                                let cloneChild = next.cloneNode(true);
-                                carouselItem.appendChild(cloneChild.children[0]);
-                                next = next.nextElementSibling;
-                            }
-                            carouselInner.appendChild(carouselItem);
-                        });
-                        carouselInner.querySelectorAll(".carousel .carousel-item")[0].classList.add("active");
-                    }
-                    function initCarousItems() {
-                        if (window.innerWidth < 768) {
-                            adjCarouselItems(1);
-                        } else {
-                            adjCarouselItems(3);
-                        }
-                    }
-                    initCarousItems();
-                    window.onresize = initCarousItems;
-                </script>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouseModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body row d-flex justify-content-center">
+                            <div class="col d-flex justify-content-center align-items-center">
+                                <img src="" alt="">
+                            </div>
+                            <div class="col close-btn-block">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="forms-page page row">
@@ -450,4 +412,6 @@
         </div>
     </div>
     <footer></footer>
+    <script src="./js/indexFloatbar.js"></script>
+    <script src="./js/indexCarousel.js"></script>
 </body>
