@@ -1,417 +1,804 @@
 <!DOCTYPE html>
+<html lang="zh">
 
 <head>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+	<meta charset="utf-8"><!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+	<meta name="description" content="2022廣達電腦徵才">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>2022年廣達儲備幹部</title>
+	<!-- Bootstrap CSS -->
+    <!-- CDN -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
     <!-- AOS CSS-->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+	<!-- Custom CSS-->
     <link rel="stylesheet" href="./css/landingpage.css" />
+    <!--SASS 我註釋掉 因為背景色會被改變--> 
+    <!-- <link rel="stylesheet" href="./sass/all.css" /> --> 
+	<!--Font-->
+	<link rel="stylesheet" href="./font/css/all.min.css" />
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <!-- CDN 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
+    <script src="./js/bootstrap.bundle.min.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./js/indexScroll.js"></script>
+	<!-- Light -->
+	<link rel="stylesheet" href="./css/glowing.css"/>
 </head>
 
 <body>
-    <script>
-        // AOS Scroll Animation
-        // AOS.init();
-
-        // Scroll Animate
-    </script>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-xl">
-                <div class="logo-block">
-                    <a class="navbar-brand" href="#">
-                        <img src="./img/topLogo.png" alt="" />
-                    </a>
-                </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">錨點</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">錨點</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">錨點</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">錨點</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">錨點</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">錨點</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="sidebar active">
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f2ebe7; " aria-label="Ninth navbar example">
+			<div class="container-lg">
+				<a class="navbar-brand" href="#">
+					<img src="img/logo_top.svg" width="200px">
+				</a>
+				<button class="btn navbar-toggler border-2 px-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" style="background-color: #e7c1b4;">
+					<img src="img/ico_menu.svg" style="width: 30px" alt="menu icon">
+				</button>
+				<div class="offcanvas offcanvas-start-lg" tabindex="-1" id="offcanvasExample"	aria-labelledby="offcanvasExampleLabel">
+					<div class="offcanvas-header d-flex d-lg-none">
+						<h4 class="offcanvas-title" id="offcanvasExampleLabel"><img src="img/logo_top_light.svg" width="80%"></h4>
+						<a href="javascript:void(0) " class="text-reset p-0" data-bs-dismiss="offcanvas" aria-label="close">
+							<img src="img/ico_menu_close.svg" width="30px">
+						</a>
+					</div>
+					<div class="offcanvas-body justify-content-end p-lg-0">
+						<ul class="navbar-nav ">
+							<li class="nav-item ">
+								<a class="nav-link" aria-current="page" href="#about">計畫介紹</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#jobs">職缺條件</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#schedule">甄選時程</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#share">MA分享</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#questions">常見問題</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#contact">聯絡我們</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container-fluid key-vision">
+			<!-- <div class="d-md-none d-lg-none w-100 h-100">
+				<div class="position-relative">
+					<div class="w-100 h-100 position-absolute">
+						<img src="img/vision_bg.png" class="vision-float-0 position-absolute d-block"alt="...">
+					</div>
+					<div class="w-100 h-100 position-absolute">
+						<img src="./img/vision_front01.png" class="vision-float-1 position-absolute d-block" alt="...">
+					</div>
+					<div class="w-100 h-100 position-absolute">
+						<img src="./img/vision_front02.png" class="vision-float-2 position-absolute d-block" alt="...">
+					</div>
+					<div class="w-100 h-100 position-absolute">
+						<img src="./img/vision_front03.png" class="vision-float-3 position-absolute d-block" alt="...">
+					</div>	
+				</div>
+			</div> -->
+			<div class="d-lg-block vh-100">
+				<div class="position-relative h-75">
+					<div class="w-100 h-100 position-absolute">
+						<img src="img/vision_bg.png" class="vision-float-0 position-absolute d-block" alt="..." >
+					</div>
+					<div class="w-100 h-100 position-absolute">
+						<img src="./img/vision_front01.png" class="vision-float-1 position-absolute" alt="...">
+					</div>
+					<div class="w-100 h-100 position-absolute">
+						<img src="./img/vision_front02.png" class="vision-float-2 position-absolute d-block" alt="...">
+					</div>
+					<div class="w-100 h-100 position-absolute">
+						<img src="./img/vision_front03.png" class="vision-float-3 position-absolute d-block" alt="...">
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!--側邊浮動區塊-->
+    <div class="sidebar active rounded-start shadow"><!-- border border-end-0 -->
         <div class="sidebar-content col">
             <button class="sidebar-collapse btn" onclick="collapsion()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-right collapseRight" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M4.146 3.646a.5.5 0 0 0 0 .708L7.793 8l-3.647 3.646a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708 0zM11.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-bar-left collapseLeft" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.854 3.646a.5.5 0 0 1 0 .708L8.207 8l3.647 3.646a.5.5 0 0 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 0 1 .708 0zM4.5 1a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 1 0v-13a.5.5 0 0 0-.5-.5z"/>
-                </svg>
+				<img src="img/ico_side_close.svg" width="16" height="16" class="bi bi-chevron-bar-right collapseRight">
+				<img src="img/ico_side_open.svg" width="16" height="16" class="bi bi-chevron-bar-left collapseLeft">
             </button>
-            <div class="collapseContent text-center">廣達人才招募網</div>
-            <ul class="sidebar-list">
-                <li>
-                    <a class="d-flex justify-content-center">
-                        <span>浮動</span>
+            <div class="collapseContent text-center fw-bold">廣達人才招募網</div>
+            <ul class="sidebar-list p-2">
+                <li class="d-flex justify-content-center">
+                    <a href="https://hr.quantatw.com/webrecruit/4-4-resume-submit.html">
+                        <img src="img/ico_sidebar01.svg" class="img-fluid" width="100%" alt="我要投遞履歷">
                     </a>
                 </li>
-                <li>
-                    <a class="d-flex justify-content-center">
-                        <span>側邊區塊</span>
+                <li class="d-flex justify-content-center">
+                    <a href="https://hr.quantatw.com/webrecruit/4-4-resume-submit.html">
+						<img src="img/ico_sidebar02.svg" class="img-fluid" width="100%" alt="我要投遞履歷">
+                        <!--<img src="img/qr-code-line.png" class="img-fluid" alt="QR Code Line">-->
                     </a>
                 </li>
-                <li>
-                    <a class="d-flex justify-content-center">
-                        <span>垂直至中</span>
-                    </a>
-                </li>
-                <li>
-                    <a class="d-flex justify-content-center">
-                        <span>(Mobile隱藏)</span>
+                <li class="d-flex justify-content-center">
+                    <a href="https://hr.quantatw.com/webrecruit/4-4-resume-submit.html" class="text-wrap">
+						<button class="btn " type="button" disabled>
+							<span class="spinner-grow spinner-grow-sm text-light" role="status" aria-hidden="true" width="10px"></span>
+							<span class="fw-bold">Here</span>
+						</button>
                     </a>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="page-content container-fluid">
-        <div class="main-page page row">
-            <div class="master-vision col justify-content-center align-items-center">
-                <img src="./img/主視覺左JPG.png" alt="" />
-            </div>
-            <div class="master-vision col justify-content-center align-items-center">
-                <img src="./img/主視覺右JPG.png" alt="" />
-            </div>
-        </div>
-        <div class="tab-page page row justify-content-center">
-            <div class="tab-block zoom-in" data-aos="zoom-in">
-                <ul class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="tab-1" data-bs-toggle="tab" data-bs-target="#tab1"
-                            type="button" role="tab" aria-controls="tab1" aria-selected="true">
-                            頁籤
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="tab-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button"
-                            role="tab" aria-controls="tab2" aria-selected="false">
-                            頁籤
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="tab-3" data-bs-toggle="tab" data-bs-target="#tab3" type="button"
-                            role="tab" aria-controls="tab3" aria-selected="false">
-                            頁籤
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="tab-4" data-bs-toggle="tab" data-bs-target="#tab4" type="button"
-                            role="tab" aria-controls="tab4" aria-selected="false">
-                            頁籤
-                        </button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="nav-tabContent">
-                    <div class="tab-pane fade zoom-in-1500 show active" id="tab1" role="tabpanel"
-                        aria-labelledby="tab-1">
-                        頁籤內容1<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
-                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
-                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
-                        Computing)在全球雲端產業中發揮影響力，
-                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
-                    </div>
-                    <div class="tab-pane fade rotate-500" id="tab2" role="tabpanel" aria-labelledby="tab-2">
-                        頁籤內容2<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
-                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
-                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
-                        Computing)在全球雲端產業中發揮影響力，
-                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
-                    </div>
-                    <div class="tab-pane fade zoom-in-500" id="tab3" role="tabpanel" aria-labelledby="tab-3">
-                        頁籤內容3<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
-                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
-                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
-                        Computing)在全球雲端產業中發揮影響力，
-                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
-                    </div>
-                    <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab-4">
-                        頁籤內容4<br />廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
-                        雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
-                        廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud
-                        Computing)在全球雲端產業中發揮影響力，
-                        重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
-                    </div>
-                </div>
-            </div>
-            <div class="tab-forms-block row zoom-in" data-aos="zoom-in">
-                <div class="accordion form-block col">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq-content-1">
-                                收合表單
-                            </button>
-                        </h2>
-                        <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                            <div class="accordion-body">收合內容</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion form-block col">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq-content-2">
-                                收合表單
-                            </button>
-                        </h2>
-                        <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                            <div class="accordion-body">收合內容</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion form-block col">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq-content-3">
-                                收合表單
-                            </button>
-                        </h2>
-                        <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                            <div class="accordion-body">收合內容</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion form-block col">
-                    <div class="accordion-item col">
-                        <h2 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#faq-content-4">
-                                收合表單
-                            </button>
-                        </h2>
-                        <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                            <div class="accordion-body">收合內容</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="banner-page page row">
-            <div class="banner col d-flex justify-content-center align-items-center">
-                <img src="./img/timeSchedule.jpg" alt="" />
-            </div>
-        </div>
-        <div class="carousel-page page row mx-auto my-auto justify-content-center">
-            <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="slide1"></button>
-                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
-                        aria-label="slide2"></button>
-                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
-                        aria-label="slide3"></button>
-                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3"
-                        aria-label="slide4"></button>
-                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4"
-                        aria-label="slide5"></button>
-                    <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5"
-                        aria-label="slide6"></button>
-                </div>
-                <div class="carousel-inner justify-content-center" role="listbox">
-                    <div class="carousel-item-default">
-                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide1">
-                            <img src="./img/slide1.png" alt="slide1" />
-                        </button>
-                    </div>
-                    <div class="carousel-item-default">
-                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide2">
-                            <img src="./img/slide2.png" alt="slide2" />
-                        </button>
-                    </div>
-                    <div class="carousel-item-default">
-                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide3">
-                            <img src="./img/slide3.png" alt="slide3" />
-                        </button>
-                    </div>
-                    <div class="carousel-item-default">
-                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide4">
-                            <img src="./img/slide4.png" alt="slide4" />
-                        </button>
-                    </div>
-                    <div class="carousel-item-default">
-                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide5">
-                            <img src="./img/slide5.png" alt="slide5" />
-                        </button>
-                    </div>
-                    <div class="carousel-item-default">
-                        <button data-bs-toggle="modal" data-bs-target="#carouselModal" data-bs-slide="slide6">
-                            <img src="./img/slide6.png" alt="" />
-                        </button>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="carouselModal" tabindex="-1" aria-labelledby="carouseModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body row d-flex justify-content-center">
-                            <div class="col d-flex justify-content-center align-items-center">
-                                <img src="" alt="">
-                            </div>
-                            <div class="col close-btn-block">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="forms-page page row">
-            <div class="form-list col-md-10 offset-md-1">
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-1">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-2">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-3">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-4">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-4" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-5">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-5" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-6">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-6" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-7">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-7" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faq-content-8">
-                            收合表單
-                        </button>
-                    </h2>
-                    <div id="faq-content-8" class="accordion-collapse collapse" data-bs-parent="#faqlist">
-                        <div class="accordion-body">收合內容</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="links-page page row zoom-in" data-aos="zoom-in">
-            <div class="link-area-block d-flex justify-content-center align-items-center">
-                <a class="link-area justify-content-center align-items-center" href="" target="_blank">
-                    <img src="./img/facebook-logo.svg" alt="" />
-                    <div class="link-icon">Icon 超連結</div>
-                </a>
-            </div>
-            <div class="link-area-block d-flex justify-content-center align-items-center">
-                <a class="link-area justify-content-center align-items-center" href="" target="_blank">
-                    <img src="./img/instagram-logo.svg" alt="" />
-                    <div class="link-icon">Icon 超連結</div>
-                </a>
-            </div>
-            <div class="link-area-block d-flex justify-content-center align-items-center">
-                <a class="link-area justify-content-center align-items-center" href="" target="_blank">
-                    <img src="./img/line-logo.svg" alt="" />
-                    <div class="link-icon">Icon 超連結</div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <footer></footer>
-    <script src="./js/indexFloatbar.js"></script>
+
+	<main>
+		<!-- 計畫介紹-頁籤 -->
+		<!--
+		分頁內層為tab-content,內層為tab-pane fad,並且其中一個加入show active
+		每個分頁需要有獨立的id
+		按鈕加上 data-bs-toggle="tab",並使用data-bs-target分別對應id
+		-->
+		<div id="about" class="container-lg py-5">
+			<p class="text-center fs-2 fw-bolder my-5">計畫介紹</p>
+			<nav>
+				<div class="nav nav-tabs flex-nowrap flex-md-wrap" id="nav-tab" role="tablist">
+					<button class="nav-link active d-md" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+						<div class="d-flex flex-column flex-md-row">
+							<img src="./img/ico_01.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="公司簡介" max-width="100%" height="40px">
+							<span class="d-inline-block align-self-center">公司簡介</span>
+						</div>
+					</button>
+					<button class="nav-link d-md" id="nav-02-tab" data-bs-toggle="tab" data-bs-target="#nav-content02" type="button" role="tab" aria-controls="nav-content02" aria-selected="false">
+						<div class="d-flex flex-column flex-md-row">
+							<img src="./img/ico_02.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="計畫介紹" max-width="100%" height="40px">
+							<span class="d-inline-block align-self-center">計畫介紹</span>
+						</div>
+					</button>
+					<button class="nav-link d-md" id="nav-03-tab" data-bs-toggle="tab" data-bs-target="#nav-content03" type="button" role="tab" aria-controls="nav-content03" aria-selected="false">
+						<div class="d-flex flex-column flex-md-row">
+							<img src="./img/ico_03.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="培訓地圖" max-width="100%" height="40px">
+							<span class="d-inline-block align-self-center">培訓地圖</span>
+						</div>
+					</button>
+					<button class="nav-link d-md" id="nav-04-tab" data-bs-toggle="tab" data-bs-target="#nav-content04" type="button" role="tab" aria-controls="nav-content04" aria-selected="false">
+						<div class="d-flex flex-column flex-md-row">
+							<img src="./img/ico_04.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="職涯發展" max-width="100%" height="40px">
+							<span class="d-inline-block align-self-center">職涯發展</span>
+						</div>
+					</button>
+				</div>
+			</nav>
+			<div class="tab-content bg-white border border-top-0 rounded-end rounded-bottom about-content" id="nav-tabContent">
+				<div class="tab-pane fade zoom-in-1500 show active p-4 p-md-5" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+					<div class="d-flex flex-column flex-md-row align-items-center">
+						<div class="w-sm-100 w-md-50 pe-md-5">
+							<img src="img/logo_square.svg" alt="廣達電腦" style="width: 200px;">
+						</div>
+						<div class="flex-grow-1 lh-lg">
+							廣達電腦成立於1988年，是全球第一大筆記型電腦研發設計製造公司。長期以來，廣達電腦以領先群倫的技術與堅強卓越的研發團隊，
+							雄踞高科技市場的領導地位，也成為全球各頂尖科技品牌最重要的設計製造服務夥伴。除了在筆記型電腦的領域中維持高成長、高品質與高評價之外，
+							廣達已將觸角延伸到企業網路系統、家庭娛樂產品、行動通訊產品、車用電子產品及數位家庭產品等市場，更以雲端運算(Cloud Computing)在全球雲端產業中發揮影響力，
+							重塑商業模式，目前也在IoT物聯網、VR/AR、AI人工智慧、5G及未來車用電子等相關技術領域中積極佈局。
+						</div>
+					</div>
+				</div>
+				<!--2-->
+				<div class="tab-pane fade zoom-in-500 p-4 p-md-5" id="nav-content02" role="tabpanel" aria-labelledby="nav-02-tab">
+					<h5>
+						<span class="fw-bold d-inline-block align-self-center">Why MA is MAker?</span>
+					</h5>
+					<p>	30年前，董事長林百里先生看到了個人電腦的新機會，創立了廣達電腦；於2012年，開始拓展雲端版圖，讓廣達成為雲端市場的先驅，董事長是廣達的首位MAker。
+						現在，廣達積極發展VR/AR及AI人工智慧等更多創新技術，我們需要更多新一代的MAker-儲備幹部(MA, Management Associate)來!
+					</p>
+					<h5>
+						<span class="fw-bold d-inline-block align-self-center">MA Program簡介</span>
+					</h5>
+					<p>30年前，董事長林百里先生看到了個人電腦的新機會，創立了廣達電腦；於2012年，開始拓展雲端版圖，讓廣達成為雲端市場的先驅，董事長是廣達的首位MAker。
+						現在，廣達積極發展VR/AR及AI人工智慧等更多創新技術，我們需要更多新一代的MAker-儲備幹部(MA, Management Associate)來共同開創新的事業。
+						廣達期待儲備幹部(MA)都能擁有MAker的開創實作精神、創新idea與執行力。具有MAker精神的你，歡迎加入廣達儲備幹部計畫!
+					</p>
+					<div class="d-flex flex-column flex-xl-row align-items-center">
+						<div class="flex-grow-1 pe-md-5">
+							<div class="d-flex">
+								<h5>
+									<i class="fas fa-gem"></i>
+									<span class="fw-bold d-inline-block align-self-center">精選</span>
+								</h5>
+							</div>
+							<p>精選具備領導潛力的年輕菁英人才(young talent)</p>
+							<div class="d-flex">
+								<h5>
+									<i class="fab fa-ethereum"></i>
+									<span class="fw-bold d-inline-block align-self-center">淬煉</span>
+								</h5>
+							</div>
+							<p>進入廣達菁英學校(QES, Quanta Elite School)，接受不同課程的專業訓練與發展活動， 在短時間內快速成長，體驗不同經驗</p>
+							<div class="d-flex">
+								<h5>
+									<i class="fas fa-chart-line"></i>
+									<span class="fw-bold d-inline-block align-self-center">成長</span>
+								</h5>
+							</div>
+							<p>與導師(Mentor)、教練(Coach)密集互動，定期給予工作回饋，幫助縮短工作適應期，迅速展現工作成果</p>
+							<div class="d-flex">
+								<h5>
+									<i class="fab fa-hubspot"></i>
+									<span class="fw-bold d-inline-block align-self-center">嚴篩</span>
+								</h5>
+							</div>
+							<p>與部門長官及導師定期檢視工作與學習成果，了解個別的發展，並給予評核與回饋，確實掌握學習狀況及成長性，幫助每一位MA能有更適合自己的發展</p>
+						</div>
+						<div class="flex-shrink-1">
+							<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#blownUp01">
+								<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+									<img src="img/chart_core.jpg" class="img-fluid mx-auto d-block" alt="核心能力">
+								</span>
+							</button>
+							<div class="modal fade" id="blownUp01" tabindex="-1" aria-labelledby="blownUpModalLabel01" aria-hidden="true">
+								<div class="modal-dialog modal-xl">
+									<div class="modal-content">
+										<div class="modal-header">
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>			
+										</div>
+										<div class="modal-body">
+											<img src="img/chart_core.jpg" class="img-fluid mx-auto d-block" alt="核心能力">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--3-->
+				<div class="tab-pane fade rotate-500 p-4 p-md-5" id="nav-content03" role="tabpanel" aria-labelledby="nav-03-tab">
+					<div class="d-grid gap-2 col-8 mx-auto">
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#blownUp02">
+							<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+								<img src="img/chart_training.jpg" class="img-fluid mx-auto d-block" alt="培訓地圖">
+							</span>
+						</button>
+					</div>
+					
+					<div class="modal fade" id="blownUp02" tabindex="-1" aria-labelledby="blownUpModalLabel02" aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>			
+								</div>
+								<div class="modal-body">
+									<img src="img/chart_training.jpg" class="img-fluid mx-auto d-block" alt="培訓地圖">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--4-->
+				<div class="tab-pane fade p-4 p-md-5" id="nav-content04" role="tabpanel" aria-labelledby="nav-04-tab">
+					<div class="d-grid gap-2 col-8 mx-auto">
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#blownUp03">
+							<span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Disabled popover">
+								<img src="img/chart_career.jpg" class="img-fluid mx-auto d-block" alt="職涯發展">
+							</span>
+						</button>
+					</div>
+					<div class="modal fade" id="blownUp03" tabindex="-1" aria-labelledby="blownUpModalLabel03" aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header">
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>			
+								</div>
+								<div class="modal-body">
+									<img src="img/chart_career.jpg" class="img-fluid mx-auto d-block" alt="職涯發展">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!--container-->
+		
+		<!-- 職缺條件-收合 -->
+		<!--
+		外層元素必須要有ID 內層的data-bs-parent 必須對應外層
+		被折疊的項目,必須有獨立的ID名稱，按鈕加入data-bs-toggle="collapse"及"data-bs-target"#對應此名
+		-->
+		<div id="jobs" class="container-lg py-5 my-5">
+			<p class="text-center fs-2 fw-bolder my-5">職缺條件</p>
+			<div class="row">
+				<div class="col-12 col-md-6 zoom-in" data-aos="zoom-in">
+					<div class="accordion" id="jobOpening">
+						<div class="accordion-item mb-3">
+							<h2 class="accordion-header shadow" id="openingHeading01">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse01" aria-expanded="true" aria-controls="collapse01">
+									<div class="d-flex">
+										<img src="./img/ico_job01.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="職缺條件" max-width="100%" height="40px">
+										<span class="fw-bold d-inline-block align-self-center fs-5 ps-3">市場分析(BD-MA)</span>
+									</div>
+								</button>
+							</h2>
+							<div id="collapse01" class="accordion-collapse collapse" style="--bs-bg-opacity: .1;" aria-labelledby="openingHeading01" data-bs-parent="#jobOpening">
+								<div class="accordion-body">
+									<div class="border-bottom pm-5">
+										<h5 class="fw-bold">車用市場開發儲備幹部</h5>
+										<p class="fw-bold">對車用市場的產品與商業模式進行調查與研究，並分析使用者行為，進而協助產品的成本分析和定價策略並擬定推廣方案。</p> 
+										<p>國內外大學或研究所畢業，科系不限</p>
+										<p>TOEIC 850以上 TOEFL 83以上</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item mb-3">
+							<h2 class="accordion-header shadow" id="openingHeading02">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse02" aria-expanded="false" aria-controls="collapse02">
+									<div class="d-flex">
+										<img src="./img/ico_job02.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="職缺條件" max-width="100%" height="40px">
+										<span class="fw-bold d-inline-block align-self-center fs-5 ps-3">業務開發(Sales-MA)</span>
+									</div>
+								</button>
+							</h2>
+							<div id="collapse02" class="accordion-collapse collapse" style="--bs-bg-opacity: .1;" aria-labelledby="openingHeading02" data-bs-parent="#jobOpenings">
+								<div class="accordion-body">
+									<div class="border-bottom pm-5">
+										<h5 class="fw-bold">車用市場開發儲備幹部</h5>
+										<p class="fw-bold">對車用市場的產品與商業模式進行調查與研究，並分析使用者行為，進而協助產品的成本分析和定價策略並擬定推廣方案。</p> 
+										<p>國內外大學或研究所畢業，科系不限</p>
+										<p>TOEIC 850以上 TOEFL 83以上</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 zoom-in" data-aos="zoom-in">
+					<div class="accordion" id="jobOpening">
+						<div class="accordion-item mb-3">
+							<h2 class="accordion-header shadow" id="openingHeading03">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse03" aria-expanded="false" aria-controls="collapse03">
+									<div class="d-flex">
+										<img src="./img/ico_job03.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="職缺條件" max-width="100%" height="40px">
+										<span class="fw-bold d-inline-block align-self-center fs-5 ps-3">專案管理(PM-MA)</span>
+									</div>
+								</button>
+							</h2>
+							<div id="collapse03" class="accordion-collapse collapse" style="--bs-bg-opacity: .1;" aria-labelledby="openingHeading03" data-bs-parent="#jobOpenings">
+								<div class="accordion-body">
+									<div class="border-bottom pm-5">
+										<h5 class="fw-bold">車用市場開發儲備幹部</h5>
+										<p class="fw-bold">對車用市場的產品與商業模式進行調查與研究，並分析使用者行為，進而協助產品的成本分析和定價策略並擬定推廣方案。</p> 
+										<p>國內外大學或研究所畢業，科系不限</p>
+										<p>TOEIC 850以上 TOEFL 83以上</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item mb-3">
+							<h2 class="accordion-header shadow" id="openingHeading04">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse04" aria-expanded="false" aria-controls="collapse03">
+									<div class="d-flex">
+										<img src="./img/ico_job04.svg" class="d-inline-block pe-sm-0 pe-md-1" alt="職缺條件" max-width="100%" height="40px">
+										<span class="fw-bold d-inline-block align-self-center fs-5 ps-3">技術研發(EA-MA)</span>
+									</div>
+								</button>
+							</h2>
+							<div id="collapse04" class="accordion-collapse collapse" style="--bs-bg-opacity: .1;" aria-labelledby="openingHeading04" data-bs-parent="#jobOpenings">
+								<div class="accordion-body">
+									<div class="border-bottom pm-5">
+										<h5 class="fw-bold">車用市場開發儲備幹部</h5>
+										<p class="fw-bold">對車用市場的產品與商業模式進行調查與研究，並分析使用者行為，進而協助產品的成本分析和定價策略並擬定推廣方案。</p> 
+										<p>國內外大學或研究所畢業，科系不限</p>
+										<p>TOEIC 850以上 TOEFL 83以上</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+		<!-- 甄選時程-Banner-->
+		<!--<div id="schedule" class="cover-container p-0 mx-auto d-flex align-items-end justify-content-center">
+			<div class="d-flex flex-column align-items-center">
+				<a href="#" class="link-danger text-decoration-none d-block p-2">立即應徵</a>
+				<button type="button" class="btn btn-secondary btn-sm mb-5">JOIN NOW</button>
+			</div>
+		</div>-->
+		<p class="text-center fs-2 fw-bolder my-5">甄選時程</p>
+		<div id="schedule" class="cover-container zoom-in">
+			
+		</div>
+		<div class="container">
+			<div class="text-center fs-6 fw-bolder my-3">各階段甄選詳細時程，請留意官方粉絲專頁公告</div>
+			<button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">
+				Popover on right
+			</button>
+			<div class="fs-6 col-2 my-3" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="right" data-bs-content="Right popover">Right popover line</div>
+			<div class="fs-6 col-2 my-3" data-bs-container="body" data-bs-toggle="tooltip" data-bs-placement="right" title="Right tooltip">Right tooltip line</div>
+		</div>
+		
+		<!--MA分享-->
+		<div id="share" class="page-content container-xl py-5 my-5">
+			<p class="text-center fs-2 fw-bolder my-5">MA分享</p>
+			<div class="carousel-page page row mx-auto my-auto justify-content-center">
+				<div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel" >
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="slide1"></button>
+						<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"	aria-label="slide2"></button>
+						<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2" aria-label="slide3"></button>
+						<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="3" aria-label="slide4"></button>
+						<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="4" aria-label="slide5"></button>
+						<button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="5" aria-label="slide6"></button>
+					</div>
+					<div class="carousel-inner justify-content-center" role="listbox">
+						<div class="carousel-item-default active">
+							<button data-bs-toggle="modal" data-bs-target="#carouselModal01" data-bs-slide="MA-Share_01">
+								<img src="./img/MA-Share_01.jpg" alt="slide1" />
+							</button>
+						</div>
+						<div class="carousel-item-default">
+							<button data-bs-toggle="modal" data-bs-target="#carouselModal02" data-bs-slide="MA-Share-02">
+								<img src="./img/MA-Share-02.jpg" alt="MA-Share-02" />
+							</button>
+						</div>
+						<div class="carousel-item-default">
+							<button data-bs-toggle="modal" data-bs-target="#carouselModal03" data-bs-slide="MA-Share-03">
+								<img src="./img/MA-Share-03.jpg" alt="slide3" />
+							</button>
+						</div>
+						<div class="carousel-item-default">
+							<button data-bs-toggle="modal" data-bs-target="#carouselModal04" data-bs-slide="MA-Share_04">
+								<img src="./img/MA-Share_01.jpg" alt="MA-Share_01" />
+							</button>
+						</div>
+						<div class="carousel-item-default">
+							<button data-bs-toggle="modal" data-bs-target="#carouselModal05" data-bs-slide="MA-Share-05">
+								<img src="./img/MA-Share-02.jpg" alt="MA-Share-02" />
+							</button>
+						</div>
+						<div class="carousel-item-default">
+							<button data-bs-toggle="modal" data-bs-target="#carouselModal06" data-bs-slide="MA-Share-06">
+								<img src="./img/MA-Share-03.jpg" alt="MA-Share-03" />
+							</button>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators"
+						data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators"
+						data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+
+				<!-- Modal -->
+				<div class="modal fade" id="carouselModal01" tabindex="-1" aria-labelledby="carouseModalLabel01" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="carouseModalLabel01">MA 分享1</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								11111
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal 02 -->
+				<div class="modal fade" id="carouselModal02" tabindex="-1" aria-labelledby="carouseModalLabel02" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="carouseModalLabel02">MA 分享2</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								2222
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal 03 -->
+				<div class="modal fade" id="carouselModal03" tabindex="-1" aria-labelledby="carouseModalLabel03" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="carouseModalLabel03">MA 分享3</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								333
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal 04 -->
+				<div class="modal fade" id="carouselModal04" tabindex="-1" aria-labelledby="carouseModalLabel04" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="carouseModalLabel04">MA 分享4</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								444
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal 05 -->
+				<div class="modal fade" id="carouselModal05" tabindex="-1" aria-labelledby="carouseModalLabel05" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="carouseModalLabel05">MA 分享5</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								555
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Modal 06 -->
+				<div class="modal fade" id="carouselModal06" tabindex="-1" aria-labelledby="carouseModalLabel06" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="carouseModalLabel06">MA 分享</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+								666
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<!-- 常見問題-收合-->
+		<!--
+		外層元素必須要有ID 內層的data-bs-parent 必須對應外層
+		被折疊的項目,必須有獨立的ID名稱，按鈕加入data-bs-toggle="collapse"及"data-bs-target"#對應此名
+		-->
+		<div id="questions" class="container-lg py-5 my-5">
+			<p class="text-center fs-2 fw-bolder my-5">常見問題</p>
+			<div class="accordion shadow" id="faqSection">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading01">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq01" aria-expanded="true" aria-controls="faq01">
+							<img src="img/ico_faq01.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">成為廣達MA，我可以獲得什麼?</span>
+						</button>
+					</h2>
+					<div id="faq01" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading01" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span class="fw-bold">
+								成為廣達MA，除了廣達的福利，更有快速學習及升遷的機制，並有許多挑戰、出差及學習的機會，能獲得各種不同的創新元素及學習資源的挹注，
+								還能接觸到國內外知名大廠客戶，在短時間讓自己更能成長，給予最大的舞台展現。
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading02">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq02" aria-expanded="true" aria-controls="faq02">
+							<img src="img/ico_faq02.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">我是應屆畢業生，但尚未取得畢業證書或正在服兵役，是否可以應徵?</span>
+						</button>
+					</h2>
+					<div id="faq02" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading02" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								若您能配合面談時間，且能於8/2到職者，都可以先應徵。報到前會再請您補交相關文件。
+								如無法安排於8/2到職者，歡迎您參與下一年度的儲備幹部計畫甄選。
+							</span > 
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading03">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq03" aria-expanded="true" aria-controls="faq03">
+							<img src="img/ico_faq03.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">我不是相關科系畢業，請問可以加入廣達MA嗎?</span>
+						</button>
+					</h2>
+					<div id="faq03" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading03" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span p class="fw-bold">
+								可以哦!廣達歡迎具有多元背景並具有跨界視野的人才一同加入，只要您願意接受挑戰，這裡一定有您可以發揮的舞台，邀請您一起加入廣達，激盪出更多創新的想法吧!
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading04">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq04" aria-expanded="true" aria-controls="faq04">
+							<img src="img/ico_faq04.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">我可以同時投遞不同種類的儲備幹部職缺嗎?</span>
+						</button>
+					</h2>
+					<div id="faq04" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading04" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								可以的，只要您符合條件，歡迎您加入廣達MA。
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading05">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq05" aria-expanded="true" aria-controls="faq05">
+							<img src="img/ico_faq05.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">請問投遞履歷後，多久會通知面試?</span>
+						</button>
+					</h2>
+					<div id="faq05" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading05" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								通過書審者，我們預計將於3/15-4/16透過電話或mail通知進行第一階段面談。請密切留意信箱與電話，以免錯過面試機會。更多MA甄選時程，請參考甄選流程頁面。
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading06">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq06" aria-expanded="true" aria-controls="faq06">
+							<img src="img/ico_faq06.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">我還在軍中服役/在學中，如果無法配合面試時間，怎麼辦?</span>
+						</button>
+					</h2>
+					<div id="faq06" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading06" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								除了團體(多對多)的面試時間之外，面談時間會盡量以您方便的時段彈性安排，敬請放心。
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading07">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq07" aria-expanded="true" aria-controls="faq07">
+							<img src="img/ico_faq07.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">想了解更多MA資訊，可以到哪邊查詢呢?</span>
+						</button>
+					</h2>
+					<div id="faq07" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading07" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								請持續關注我們的官方FB、IG、Line社群，可以獲得更多相關資訊哦!
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading08">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq08" aria-expanded="true" aria-controls="faq08">
+							<img src="img/ico_faq08.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">什麼時候會知道面試結果?</span>
+						</button>
+					</h2>
+					<div id="faq08" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading08" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								通過HR面談者預計將於2021/4/29前收到通知，進行下一階段評核，每一階段評核皆須2-3週審核期間，我們將以mail通知您是否進入後續甄選，
+								敬請耐心等候。錄取者預計於2021/6/15前收到錄取通知，未錄取者恕不另行通知。
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading09">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq09" aria-expanded="true" aria-controls="faq09">
+							<img src="img/ico_faq09.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">書審需要準備哪些資料呢?</span>
+						</button>
+					</h2>
+					<div id="faq09" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading09" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								缺
+							</span >
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="faqHeading10">
+						<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="true" aria-controls="faq10">
+							<img src="img/ico_faq10.svg" class="" max-width="90%" height="50">
+							<span class="fs-5 fw-bold">如果我的英文成績尚未達標準或超過期限怎麼辦?</span>
+						</button>
+					</h2>
+					<div id="faq10" class="accordion-collapse collapse bg-secondary" style="--bs-bg-opacity: .1;" aria-labelledby="faqHeading10" data-bs-parent="#faqSection">
+						<div class="accordion-body">
+							<span  class="fw-bold">
+								若您還在準備相關多益考試或成績已超過兩年，也歡迎先投遞履歷，之後再進行補件或是到公司進行測驗也可以。
+							</span >
+						</div>
+					</div>
+				</div>
+
+			</div>			
+		</div>
+	</main>
+
+	<!-- 聯絡我們-IconBox-->
+	<footer>
+		<div id="contact" class="container my-5" id="featured-3">
+			<p class="text-center fs-2 fw-bolder my-5">聯絡我們</p>
+			<div class="row g-4 row-cols-1 row-cols-lg-3">
+				<div class="feature col text-center zoom-in" data-aos="zoom-in">
+					<a href="https://www.facebook.com/%E5%BB%A3%E9%81%94%E5%84%B2%E5%82%99%E5%B9%B9%E9%83%A8%E8%A8%88%E7%95%ABMAker-176611102826305/" class="icon-link">
+						<div class="feature-icon">
+							<img class="d-block mx-auto mb-4"  src="img/ico_facebook.svg" width="50%" >
+						</div>
+						<h5 class="fw-bold link-dark">FACEBOOK</h5>
+					</a>
+				</div>
+				<div class="feature col text-center zoom-in zoom-in-60" data-aos="zoom-in">
+					<a href="https://www.instagram.com/quanta.ma/" class="icon-link">
+						<div class="feature-icon">
+							<img class="d-block mx-auto mb-4" src="img/ico_ig.svg" width="50%" >
+						</div>
+						<h5 class="fw-bold link-dark">INSTAGRAM</h5>
+						
+					</a>
+					<small>quanta.ma</small>
+				</div>
+				<div class="feature col text-center zoom-in zoom-in-90" data-aos="zoom-in">
+					<a href="https://line.me/R/ti/p/%40dgu2959q" class="icon-link d-block">
+						<div class="feature-icon">
+							<img class="d-block mx-auto mb-4" src="img/ico_line.svg" width="50%" >
+						</div>
+						<h5 class="fw-bold link-dark">LINE</h5>
+						
+					</a>
+					<small class="text-center">@cey5418n</small>
+				</div>				
+			</div>
+		</div>
+		<div class="container mb-5">
+			<p class="fs-6 text-center">更多廣達MA儲備幹部計畫的最新消息都在以上官方粉絲團即時更新，趕快一起加入追蹤的行列吧!</p>
+		</div>
+	</footer>
+	<script src="./js/indexFloatbar.js"></script>
     <script src="./js/indexCarousel.js"></script>
+	<script src="./js/indexTooltip.js"></script>
+	<script src="./js/indexPopover.js"></script>
 </body>
+
+
+</html>

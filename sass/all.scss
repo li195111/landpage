@@ -1,0 +1,32 @@
+@import "../bs/test";
+
+@import "../bs/scss/bootstrap.scss";
+@import "./helpers/variables";
+// Custom.scss
+// Option B: Include parts of Bootstrap
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../bs/scss/functions";
+
+// 2. Include any default variable overrides here
+
+// 3. Include remainder of required Bootstrap stylesheets
+// @import "../bs/scss/variables";
+@import "../bs/scss/mixins";
+@import "../bs/scss/root";
+
+// 4. Include any optional Bootstrap CSS as needed
+@import "../bs/scss/utilities";
+@import "../bs/scss/reboot";
+@import "../bs/scss/reboot";
+@import "../bs/scss/images";
+@import "../bs/scss/containers";
+@import "../bs/scss/grid";
+@import "../bs/scss/helpers";
+
+// 5. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../bs/scss/utilities/api";
+
+// 6. Add additional custom code here
+
+

@@ -1,0 +1,13 @@
+$max:yellow;
+
+.filter{
+    filter: blur(1px);
+    color: $max;
+}
+
+$primaryHeaderBack : lightblue;
+
+header {
+    background: $primaryHeaderBack;
+}
+

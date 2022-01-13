@@ -1,6 +1,5 @@
 // Scroll Animate
-function reveal() {
-    var reveals = document.querySelectorAll(".zoom-in");
+function toggleElements(reveals){
     for (var i = 0; i < reveals.length; i++) {
         var windowHeight = window.innerHeight;
         var elementTop = reveals[i].getBoundingClientRect().top;
@@ -12,5 +11,8 @@ function reveal() {
             reveals[i].classList.remove("active");
         }
     }
+}
+function reveal() {
+    toggleElements(document.querySelectorAll(".zoom-in"));
 }
 window.addEventListener("scroll", reveal);

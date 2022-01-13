@@ -39,6 +39,6 @@ carouselModal.addEventListener('show.bs.modal', function (event) {
     var button = event.relatedTarget;
     var slide = button.getAttribute('data-bs-slide');
     var modalBodyImg = carouselModal.querySelector('.modal-body img');
-    modalBodyImg.src = `./img/${slide}.png`;
+    modalBodyImg.src = `./img/${slide}.jpg`;
   })
   
