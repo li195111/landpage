@@ -5,7 +5,7 @@ function getYPosition(height){
 }
 const sidebar = document.querySelector('.sidebar');
 const sidebarRect = sidebar.getBoundingClientRect();
-const sidebarHeight = window.innerHeight * 0.5 + sidebarRect.height * 0.5;
+const sidebarHeight = 220 ;
 sidebar.style.top = `${getYPosition(sidebarHeight)}px`;
 window.onscroll = ()=>{
     sidebar.style.top = `${getYPosition(sidebarHeight)}px`;
