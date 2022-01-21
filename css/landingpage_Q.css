@@ -17,36 +17,45 @@ a{
 
 @keyframes float-1 {
   0% {
+    -webkit-transform:translateY(1%);
     transform: translateY(1%);
   }
   50% {
+    -webkit-transform:translateY(0%);
     transform: translateY(0%);
   }
   100% {
+    -webkit-transform:translateY(1%);
     transform: translateY(1%);
   }
 }
 
 @keyframes float-3 {
   0% {
+    -webkit-transform:translateY(3%);
     transform: translateY(3%);
   }
   50% {
+    -webkit-transform:translateY(0%);
     transform: translateY(0%);
   }
   100% {
+    -webkit-transform:translateY(3%);
     transform: translateY(3%);
   }
 }
 
 @keyframes float-5 {
   0% {
+    -webkit-transform: translateY(5%);
     transform: translateY(5%);
   }
   50% {
+    -webkit-transform: translateY(0%);
     transform: translateY(0%);
   }
   100% {
+    -webkit-transform: translateY(5%);
     transform: translateY(5%);
   }
 }
@@ -110,6 +119,7 @@ a{
     top          : 0;
     left         : 0;
     border-right : 1px solid rgba(0, 0, 0, .2);
+    -webkit-transform: translateX(-100%);
     transform    : translateX(-100%);
     background-color: #000000;
   }
@@ -167,11 +177,13 @@ a{
 
 .carousel-inner .carousel-item-end.active,
 .carousel-inner .carousel-item-next {
+  -webkit-transform: translateX(100%);
   transform: translateX(100%);
 }
 
 .carousel-inner .carousel-item-start.active,
 .carousel-inner .carousel-item-prev {
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 
@@ -336,11 +348,13 @@ a{
 
   .carousel-inner .carousel-item-end.active,
   .carousel-inner .carousel-item-next {
+    -webkit-transform: translateX(33.33%);
     transform: translateX(33.33%);
   }
 
   .carousel-inner .carousel-item-start.active,
   .carousel-inner .carousel-item-prev {
+    -webkit-transform: translateX(-33.33%);
     transform: translateX(-33.33%);
   }
 
@@ -377,6 +391,7 @@ a{
 
 .carousel-inner .carousel-item-end,
 .carousel-inner .carousel-item-start {
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -384,59 +399,75 @@ a{
 /* Scroll Animation */
 .zoom-in {
   position: relative;
+  -webkit-transform: scale(0) translateY(50%);
   transform: scale(0) translateY(50%);
   opacity: 0;
   transition: 1s all ease;
 }
 
 .zoom-in-10 {
+  -webkit-transform: scale(0) translateY(110%);
   transform: scale(0) translateY(110%);
 }
 
 .zoom-in-20 {
+  -webkit-transform: scale(0) translateY(120%);
   transform: scale(0) translateY(120%);
 }
 
 .zoom-in-30 {
+  -webkit-transform: scale(0) translateY(130%);
   transform: scale(0) translateY(130%);
 }
 
 .zoom-in-40 {
+  -webkit-transform: scale(0) translateY(140%);
   transform: scale(0) translateY(140%);
 }
 
 .zoom-in-50 {
+  -webkit-transform: scale(0) translateY(150%);
   transform: scale(0) translateY(150%);
 }
 
 .zoom-in-60 {
+  -webkit-transform: scale(0) translateY(160%);
   transform: scale(0) translateY(160%);
 }
 
 .zoom-in-70 {
+  -webkit-transform: scale(0) translateY(170%);
   transform: scale(0) translateY(170%);
 }
 
 .zoom-in-80 {
+  -webkit-transform: scale(0) translateY(180%);
   transform: scale(0) translateY(180%);
 }
 
 .zoom-in-90 {
+  -webkit-transform: scale(0) translateY(190%);
   transform: scale(0) translateY(190%);
 }
 
 .zoom-in.active {
-  transform: scale(100%) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  -webkit-transform: scale(1) translateY(0);
+  -moz-transform: scale(1) translateY(0);
+  -o-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0);
   opacity: 1;
 }
 
 /* Animation */
 @keyframes zoom-in {
   0% {
-    transform: scale(0%);
+    -webkit-transform: scale(0);
+    transform: scale(0);
   }
   100% {
-    transform: scale(100%);
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
 }
 
@@ -458,11 +489,13 @@ a{
 
 @keyframes rotate {
   0% {
-    transform: scale(0%) rotate(0deg);
+    -webkit-transform: scale(0) rotate(0deg);
+    transform: scale(0) rotate(0deg);
     animation-duration: 50ms;
   }
   100% {
-    transform: scale(100%) rotate(360deg);
+    -webkit-transform: scale(1) rotate(360deg);
+    transform: scale(1) rotate(360deg);
     animation-duration: 50ms;
   }
 }
